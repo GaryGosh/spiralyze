@@ -437,28 +437,27 @@ a:visited {
   cursor: pointer;
 }
 
+.service-tile:hover .info-icon {
+  visibility: visible;
+}
+
 .service-tile:hover {
   color: var(--element-color);
 }
 
-.service-tile .info-icon {
+.info-icon {
+  position: absolute;
+  right: 48px;
   visibility: hidden;
+  width: 30px;
+  height: 30px;
+  fill: var(--element-color);
 }
 
 .service-tile > div {
   word-wrap: break-word;
   max-width: 299px;
 }
-
-.service-tile > svg {
-  position: absolute;
-  right: 48px;
-  visibility: hidden;
-}
-
-/* .service-tile:hover svg {
-  visibility: visible;
-} */
 
 .tooltip-wrapper {
   position: absolute;
