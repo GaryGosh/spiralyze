@@ -146,12 +146,10 @@ body {
 
 /* header */
 .header {
-  /* position: fixed;
+  position: absolute;
   top: 0;
-  left: 0; */
-  width: 100%;
-  height: 100%;
-  background-image: url(./assets/header-image.png);
+  left: 0;
+  right: 0;
 }
 
 .nav {
@@ -640,8 +638,8 @@ a:visited {
 .privacy-policy,
 .footer-option {
   font-size: var(--regular-font-size);
-  font-weight: var(--regular-font-weight);
-  color: var(--footer-text-color);
+  font-weight: var(--regular-font-weight) !important;
+  color: var(--footer-text-color) !important;
 }
 
 .footer-right {
@@ -663,4 +661,22 @@ a:visited {
 .curve-overlay {
   position: absolute;
   z-index: 1000;
+}
+
+.gradient-wrapper {
+  position: relative;
+  background-image: url(./assets/mainbg.png);
+}
+
+.grey-curve {
+  position: absolute;
+  bottom: 0;
+  z-index: 100;
+  left: 0;
+}
+
+.white-curve {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
 }
