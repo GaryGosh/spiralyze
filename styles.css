@@ -124,6 +124,7 @@ body {
   box-shadow: var(--btn-shadow);
   background-color: transparent;
   cursor: pointer;
+  transition: transform 0.3s;
 }
 
 .align-center {
