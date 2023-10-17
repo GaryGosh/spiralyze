@@ -27,6 +27,7 @@
   --tip-bg: #297c6b;
   --faded-color: #eaeaea;
   --warning-color: #ff7777;
+  --footer-text-color: #757575;
 
   --btn-radius: 4px;
   --btn-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.08);
@@ -99,6 +100,7 @@ body {
   box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.08);
   color: var(--white-text);
   border: none;
+  cursor: pointer;
 }
 
 .primary-button-pressed {
@@ -121,6 +123,7 @@ body {
   border-radius: var(--btn-radius);
   box-shadow: var(--btn-shadow);
   background-color: transparent;
+  cursor: pointer;
 }
 
 .align-center {
@@ -521,6 +524,7 @@ a:visited {
   position: absolute;
   top: 45%;
   right: 30%;
+  cursor: pointer;
 }
 
 .svg-wrapper {
@@ -621,4 +625,37 @@ a:visited {
   position: absolute;
   right: 36px;
   bottom: 36px;
+}
+
+.footer {
+  padding: 38px 128px;
+  background-color: var(--faded-color);
+}
+
+.footer-items-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.privacy-policy,
+.footer-option {
+  font-size: var(--regular-font-size);
+  font-weight: var(--regular-font-weight);
+  color: var(--footer-text-color);
+}
+
+.footer-right {
+  display: flex;
+  gap: 16px;
+  list-style: none;
+}
+
+.footer-right li {
+  border-right: 1px solid var(--footer-text-color);
+  padding-right: 16px;
+  line-height: 12px !important;
+}
+
+.footer-right li:nth-child(3) {
+  border: none;
 }

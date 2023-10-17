@@ -72,3 +72,9 @@ function togglePlay() {
 
 // Add a click event listener to the play button
 playBtn.addEventListener("click", togglePlay);
+
+document.addEventListener("DOMContentLoaded", function () {
+  const currentYear = new Date().getFullYear();
+  const yearSpan = document.getElementById("current-year");
+  yearSpan.textContent = currentYear;
+});
