@@ -496,3 +496,75 @@ a:visited {
   top: -9px;
   left: 48%;
 }
+
+/* video block */
+.video-wrapper {
+  display: flex;
+  position: relative;
+}
+
+.video-container {
+  /* position: relative; */
+}
+
+.main-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+
+.svg-container {
+  position: absolute;
+  top: 45%;
+  right: 30%;
+}
+
+.svg-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.svg-wrapper .circle-1 {
+  transition: cx 0.5s, cy 0.5s, r 0.5s;
+}
+
+.svg-wrapper:hover .circle-1 {
+  cx: 114;
+  cy: 114;
+  r: 114;
+}
+
+.svg-wrapper .circle-2 {
+  transition: cx 0.5s, cy 0.5s, r 0.5s;
+}
+
+.svg-wrapper:hover .circle-2 {
+  cx: 114;
+  cy: 114;
+  r: 113;
+}
+
+.svg-wrapper .circle-3 {
+  transition: cx 0.5s, cy 0.5s, r 0.5s;
+}
+
+.svg-wrapper:hover .circle-3 {
+  cx: 114;
+  cy: 114;
+  r: 76.0751;
+}
+
+.svg-wrapper .path {
+  transition: d 0.5s;
+}
+
+.svg-wrapper:hover .path {
+  d: path(
+    "M134.619 110.354C137.286 111.894 137.286 115.743 134.619 117.283L103.494 135.253C100.827 136.792 97.4939 134.868 97.4939 131.789L97.4939 95.8482C97.4939 92.769 100.827 90.8445 103.494 92.3841L134.619 110.354Z"
+  );
+}
