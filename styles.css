@@ -694,12 +694,38 @@ label {
   margin-top: -5px;
 }
 
-.error-message {
-  color: red;
-  font-size: 14px;
+.error-wrapper {
+  position: absolute;
+  top: 60px;
+  z-index: 100;
+  width: 200px;
+  display: none;
 }
 
-.input-wrapper {
+.error-message {
+  color: var(--white-text);
+  font-size: 13px;
+  font-style: normal;
+  font-weight: var(--regular-font-weight);
+  line-height: 20px;
+  background: var(--warning-color);
+  padding: 12px 16px;
+  border-radius: 8px;
+}
+
+.error-tip {
+  width: 0;
+  height: 0;
+  border-left: 11px solid transparent;
+  border-right: 11px solid transparent;
+  border-bottom: 9px solid var(--warning-color);
+  position: absolute;
+  top: -8px;
+  left: 48%;
+}
+
+.input-wrapper,
+.select-wrapper {
   position: relative;
 }
 

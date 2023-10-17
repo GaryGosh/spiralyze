@@ -89,10 +89,23 @@ form.addEventListener("submit", function (e) {
   const company = document.getElementById("company");
   const country = document.getElementById("country");
 
+  const firstNameErrorContainer = document.getElementById(
+    "firstname-error-container"
+  );
   const firstNameError = document.getElementById("firstName-error");
+  const lastNameErrorContainer = document.getElementById(
+    "lastname-error-container"
+  );
   const lastNameError = document.getElementById("lastName-error");
+  const emailErrorContainer = document.getElementById("email-error-container");
   const emailError = document.getElementById("email-error");
+  const companyErrorContainer = document.getElementById(
+    "company-error-container"
+  );
   const companyError = document.getElementById("company-error");
+  const countryErrorContainer = document.getElementById(
+    "country-error-container"
+  );
   const countryError = document.getElementById("country-error");
 
   firstNameError.textContent = "";
@@ -103,26 +116,62 @@ form.addEventListener("submit", function (e) {
 
   if (!firstName.value) {
     e.preventDefault();
-    firstNameError.textContent = "First Name cannot be empty";
+    firstNameErrorContainer.style.display = "block";
+    firstNameError.textContent =
+      "This field can’t be empty. Please fill it in.";
+    return;
+  } else {
+    firstNameErrorContainer.style.display = "none";
   }
 
   if (!lastName.value) {
     e.preventDefault();
-    lastNameError.textContent = "Last Name cannot be empty";
+    lastNameErrorContainer.style.display = "block";
+    lastNameError.textContent = "This field can’t be empty. Please fill it in.";
+    return;
+  } else {
+    lastNameErrorContainer.style.display = "none";
   }
 
   if (!email.value) {
     e.preventDefault();
-    emailError.textContent = "Email cannot be empty";
+    emailErrorContainer.style.display = "block";
+    emailError.textContent = "This field can’t be empty. Please fill it in.";
+    return;
+  } else {
+    emailErrorContainer.style.display = "none";
+  }
+
+  if (!validateEmail(email.value)) {
+    email.value = "";
+    e.preventDefault();
+    emailErrorContainer.style.display = "block";
+    emailError.textContent = "Enter a valid email";
+    return;
+  } else {
+    emailErrorContainer.style.display = "none";
   }
 
   if (!company.value) {
     e.preventDefault();
-    companyError.textContent = "Company cannot be empty";
+    companyErrorContainer.style.display = "block";
+    companyError.textContent = "This field can’t be empty. Please fill it in.";
+    return;
+  } else {
+    companyErrorContainer.style.display = "none";
   }
 
-  if (!country.value) {
+  if (!country.value || country.value === "") {
     e.preventDefault();
-    countryError.textContent = "Please select a country";
+    countryErrorContainer.style.display = "block";
+    countryError.textContent = "This field can’t be empty. Please fill it in.";
+    return;
+  } else {
+    countryErrorContainer.style.display = "none";
   }
 });
+
+function validateEmail(email) {
+  var re = /\S+@\S+\.\S+/;
+  return re.test(email);
+}
