@@ -568,3 +568,57 @@ a:visited {
     "M134.619 110.354C137.286 111.894 137.286 115.743 134.619 117.283L103.494 135.253C100.827 136.792 97.4939 134.868 97.4939 131.789L97.4939 95.8482C97.4939 92.769 100.827 90.8445 103.494 92.3841L134.619 110.354Z"
   );
 }
+
+.video-description {
+  position: absolute;
+  bottom: 80px;
+  left: 128px;
+  z-index: 1001;
+}
+
+.video-title {
+  font-size: 44px;
+  font-weight: var(--bold-font-weight);
+  line-height: 52px;
+  font-style: normal;
+  color: var(--white-text);
+}
+
+.video-points-wrapper {
+  margin-top: 48px;
+}
+
+.video-point {
+  display: flex;
+  justify-content: flex-start;
+  gap: 24px;
+}
+
+.check-icon {
+  margin-top: 6px;
+  width: 18px;
+  height: 18px;
+}
+
+.point-header {
+  font-size: 24px;
+  font-weight: var(--bold-font-weight);
+  line-height: 32px;
+  color: var(--white-text);
+  margin-bottom: 8px;
+}
+
+.point-description {
+  font-size: var(--medium-font-size);
+  font-weight: var(--regular-font-weight);
+  line-height: var(--medium-line-height);
+  color: var(--faded-color);
+  margin-bottom: 22px;
+  max-width: 482px;
+}
+
+.watermark {
+  position: absolute;
+  right: 36px;
+  bottom: 36px;
+}
