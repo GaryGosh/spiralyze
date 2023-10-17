@@ -57,3 +57,18 @@ prevSlide.addEventListener("click", () => {
 
 // Initialize the indicators
 updateIndicators();
+
+const video = document.querySelector(".main-video");
+const playBtn = document.querySelector(".svg-container");
+
+// Function to toggle play/pause
+function togglePlay() {
+  if (video.paused) {
+    video.play();
+  } else {
+    video.pause();
+  }
+}
+
+// Add a click event listener to the play button
+playBtn.addEventListener("click", togglePlay);
