@@ -735,11 +735,12 @@ label {
   border: 1px solid rgba(255, 255, 255, 0.5);
   background: rgba(255, 255, 255, 0.04);
   width: 200px;
+  font-family: var(--main-font);
   font-size: 16px;
   font-weight: var(--regular-font-weight);
   padding: 14px 16px;
   outline: none;
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--white-text);
 }
 .form-group label {
   position: absolute;
@@ -762,6 +763,7 @@ label {
   padding: 0 4px;
   background: #2a7d6c;
   font-size: 13px;
+  color: var(--white-text);
 }
 
 ::-webkit-input-placeholder {
