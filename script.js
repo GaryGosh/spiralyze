@@ -169,6 +169,12 @@ form.addEventListener("submit", function (e) {
   } else {
     countryErrorContainer.style.display = "none";
   }
+
+  setTimeout(function () {
+    // Redirect to the "Thank You" page
+    window.location.href = form.action;
+  }, 2000);
+  e.preventDefault();
 });
 
 function validateEmail(email) {
