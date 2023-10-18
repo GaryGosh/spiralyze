@@ -156,9 +156,9 @@ body {
 .nav {
   position: relative;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
-  padding-top: 20px;
+  padding: 20px 128px 0 128px;
 }
 
 .nav__logo {
@@ -227,9 +227,10 @@ a:visited {
 
 .banner-content-wrapper {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   margin-top: 66px;
+  padding: 0 128px;
 }
 
 .banner-description {
