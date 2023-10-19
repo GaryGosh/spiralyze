@@ -21,6 +21,7 @@
         height="650"
         viewBox="0 0 1440 650"
         fill="none"
+        class="gradient-vector"
       >
         <path d="M0 0H1440V650H0V0Z" fill="url(#paint0_linear_1_101)" />
         <defs>
@@ -722,8 +723,10 @@
       <!-- video block -->
       <div class="video-wrapper">
         <div class="video-description">
-          <span class="video-title outlined-text">WATCH</span>
-          <span class="video-title">&nbsp;THE VIDEO</span>
+          <div class="video-title-wrapper">
+            <span class="video-title outlined-text">WATCH</span>
+            <span class="video-title">&nbsp;THE VIDEO</span>
+          </div>
 
           <div class="video-points-wrapper">
             <div class="video-point">
@@ -812,12 +815,26 @@
           />
         </svg>
         <svg
+          class="curve-overlay-mobile"
+          xmlns="http://www.w3.org/2000/svg"
+          width="100%"
+          height="705"
+          viewBox="0 0 414 705"
+          fill="none"
+        >
+          <path
+            d="M414 0L414 672.055C207.778 593.182 180.278 776.131 1.1411e-06 672.055L3.05176e-05 -1.57361e-05L414 0Z"
+            fill="white"
+            fill-opacity="0.2"
+          />
+        </svg>
+        <svg
           xmlns="http://www.w3.org/2000/svg"
           width="755"
           height="648"
           viewBox="0 0 755 648"
           fill="none"
-          style="z-index: 1001"
+          class="video-gradient-dt"
         >
           <path
             d="M0 0H719.719C635.252 274 831.175 323.5 719.719 648H0V0Z"
@@ -830,6 +847,32 @@
               y1="0"
               x2="377.5"
               y2="648"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#305D52" />
+              <stop offset="1" stop-color="#153F38" />
+            </linearGradient>
+          </defs>
+        </svg>
+        <svg
+          class="video-gradient-vector"
+          xmlns="http://www.w3.org/2000/svg"
+          width="100%"
+          height="673"
+          viewBox="0 0 414 673"
+          fill="none"
+        >
+          <path
+            d="M414 0L414 641.551C207.778 566.258 180.278 740.902 2.4745e-06 641.551L3.05176e-05 -1.57361e-05L414 0Z"
+            fill="url(#paint0_linear_1_581)"
+          />
+          <defs>
+            <linearGradient
+              id="paint0_linear_1_581"
+              x1="186.328"
+              y1="8.45701"
+              x2="186.328"
+              y2="673"
               gradientUnits="userSpaceOnUse"
             >
               <stop stop-color="#305D52" />
