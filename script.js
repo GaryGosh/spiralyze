@@ -79,12 +79,31 @@ prevSlide.addEventListener("click", () => {
 // Initialize the indicators
 updateIndicators();
 
-// auto playing carousel on mobile & tablets
 function checkScreenSize() {
   if (window.innerWidth < 1024) {
+    // auto playing carousel on mobile & tablets
     setInterval(() => {
       navigateSlide("next");
     }, 3000);
+  }
+
+  let videoGradient = document.querySelector(".video-gradient-vector");
+  let videoGradientTab = document.querySelector(".video-gradient-vector-tab");
+  let videoElement = document.querySelector(".main-video");
+  let videoWrapper = document.querySelector(".video-wrapper");
+
+  if (window.innerWidth < 768) {
+    // Example threshold for mobile screens
+    let totalHeight =
+      videoGradient.getBBox().height + videoElement.offsetHeight - 124;
+
+    videoWrapper.style.height = totalHeight + "px";
+  } else if (window.innerWidth < 1024) {
+    // Example threshold for tablet screens
+    let totalHeight =
+      videoGradientTab.getBBox().height + videoElement.offsetHeight - 104;
+
+    videoWrapper.style.height = totalHeight + "px";
   }
 }
 
@@ -214,17 +233,6 @@ form.addEventListener("submit", function (e) {
 });
 
 function validateEmail(email) {
-  var re = /\S+@\S+\.\S+/;
+  let re = /\S+@\S+\.\S+/;
   return re.test(email);
 }
-
-var videoGradient = document.querySelector(".video-gradient-vector");
-var videoElement = document.querySelector(".main-video");
-var videoWrapper = document.querySelector(".video-wrapper");
-
-var totalHeight =
-  videoGradient.getBBox().height + videoElement.offsetHeight - 124;
-
-console.log("total height ", totalHeight);
-
-videoWrapper.style.height = totalHeight + "px";
