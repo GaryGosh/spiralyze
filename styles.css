@@ -784,6 +784,14 @@ label {
   color: var(--white-text);
 }
 
+.error-label {
+  top: 4px !important;
+  padding: 0 4px !important;
+  background: #2a7d6c;
+  font-size: 13px !important;
+  color: var(--warning-color) !important;
+}
+
 ::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
   font-family: var(--main-font);

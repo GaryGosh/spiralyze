@@ -137,9 +137,13 @@ const form = document.getElementById("myForm");
 
 form.addEventListener("submit", function (e) {
   const firstName = document.getElementById("firstName");
+  const firstNameLabel = document.getElementById("firstnameLabel");
   const lastName = document.getElementById("lastName");
+  const lastNameLabel = document.getElementById("lastnameLabel");
   const email = document.getElementById("email");
+  const emailLabel = document.getElementById("emailLabel");
   const company = document.getElementById("company");
+  const companyLabel = document.getElementById("companyLabel");
   const country = document.getElementById("country");
 
   const firstNameErrorContainer = document.getElementById(
@@ -171,29 +175,39 @@ form.addEventListener("submit", function (e) {
     e.preventDefault();
     firstNameErrorContainer.style.display = "block";
     firstName.style.border = "1px solid #FF7777";
+    firstNameLabel.classList.add("error-label");
     firstNameError.textContent =
       "This field can’t be empty. Please fill it in.";
     return;
   } else {
     firstName.style.border = "1px solid rgba(255, 255, 255, 0.5)";
+    firstNameLabel.classList.remove("error-label");
     firstNameErrorContainer.style.display = "none";
   }
 
   if (!lastName.value) {
     e.preventDefault();
     lastNameErrorContainer.style.display = "block";
+    lastName.style.border = "1px solid #FF7777";
+    lastNameLabel.classList.add("error-label");
     lastNameError.textContent = "This field can’t be empty. Please fill it in.";
     return;
   } else {
+    lastName.style.border = "1px solid rgba(255, 255, 255, 0.5)";
+    lastNameLabel.classList.remove("error-label");
     lastNameErrorContainer.style.display = "none";
   }
 
   if (!email.value) {
     e.preventDefault();
     emailErrorContainer.style.display = "block";
+    email.style.border = "1px solid #FF7777";
+    emailLabel.classList.add("error-label");
     emailError.textContent = "This field can’t be empty. Please fill it in.";
     return;
   } else {
+    email.style.border = "1px solid rgba(255, 255, 255, 0.5)";
+    emailLabel.classList.remove("error-label");
     emailErrorContainer.style.display = "none";
   }
 
@@ -201,27 +215,37 @@ form.addEventListener("submit", function (e) {
     email.value = "";
     e.preventDefault();
     emailErrorContainer.style.display = "block";
+    email.style.border = "1px solid #FF7777";
+    emailLabel.classList.add("error-label");
     emailError.textContent = "Enter a valid email";
     return;
   } else {
+    email.style.border = "1px solid rgba(255, 255, 255, 0.5)";
+    emailLabel.classList.remove("error-label");
     emailErrorContainer.style.display = "none";
   }
 
   if (!company.value) {
     e.preventDefault();
     companyErrorContainer.style.display = "block";
+    company.style.border = "1px solid #FF7777";
+    companyLabel.classList.add("error-label");
     companyError.textContent = "This field can’t be empty. Please fill it in.";
     return;
   } else {
+    company.style.border = "1px solid rgba(255, 255, 255, 0.5)";
+    companyLabel.classList.remove("error-label");
     companyErrorContainer.style.display = "none";
   }
 
   if (!country.value || country.value === "") {
     e.preventDefault();
     countryErrorContainer.style.display = "block";
+    country.style.border = "1px solid #FF7777";
     countryError.textContent = "This field can’t be empty. Please fill it in.";
     return;
   } else {
+    country.style.border = "1px solid rgba(255, 255, 255, 0.5)";
     countryErrorContainer.style.display = "none";
   }
 
