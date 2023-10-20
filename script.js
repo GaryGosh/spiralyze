@@ -87,10 +87,10 @@ function checkScreenSize() {
     }, 3000);
   }
 
-  let videoGradient = document.querySelector(".video-gradient-vector");
-  let videoGradientTab = document.querySelector(".video-gradient-vector-tab");
-  let videoElement = document.querySelector(".main-video");
-  let videoWrapper = document.querySelector(".video-wrapper");
+  const videoGradient = document.querySelector(".video-gradient-vector");
+  const videoGradientTab = document.querySelector(".video-gradient-vector-tab");
+  const videoElement = document.querySelector(".main-video");
+  const videoWrapper = document.querySelector(".video-wrapper");
 
   if (window.innerWidth < 768) {
     // Example threshold for mobile screens
@@ -104,6 +104,7 @@ function checkScreenSize() {
       videoGradientTab.getBBox().height + videoElement.offsetHeight - 104;
 
     videoWrapper.style.height = totalHeight + "px";
+    videoGradient.remove();
   }
 }
 
