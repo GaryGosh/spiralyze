@@ -194,6 +194,11 @@ body {
   color: var(--white-text);
 }
 
+.nav__toggle,
+.nav__close {
+  display: none;
+}
+
 a {
   text-decoration: none;
 }
@@ -933,6 +938,39 @@ select::placeholder {
 
   .nav__logo {
     display: block;
+  }
+
+  .show__toggle {
+    display: block !important;
+  }
+
+  .hide__toggle {
+    display: none !important;
+  }
+
+  .nav__toggle {
+    display: flex;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+
+  .nav__close {
+    display: none;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+
+  .nav__menu__visible {
+    display: block;
+    transition: all 0.5s ease-in;
+  }
+
+  .nav__list__expand {
+    flex-direction: column;
+    margin-top: 20px;
+    transition: all 0.5s ease-in;
   }
 
   .form-wrapper {
