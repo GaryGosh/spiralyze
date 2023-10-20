@@ -210,6 +210,10 @@ a:visited {
   font-weight: var(--bold-font-weight);
 }
 
+.active-menu {
+  text-decoration: underline;
+}
+
 .title {
   font-family: var(--main-font);
   font-weight: var(--bold-font-weight);
