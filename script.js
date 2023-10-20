@@ -1,4 +1,25 @@
 "use strict";
+
+const toggle = document.getElementById("nav__toggle");
+const navMenu = document.getElementById("nav__menu");
+const navList = document.getElementById("nav__list");
+const navClose = document.getElementById("nav__close");
+
+toggle.addEventListener("click", function () {
+  console.log("hihi");
+  navMenu.classList.add("nav__menu__visible");
+  navList.classList.add("nav__list__expand");
+  toggle.classList.add("hide__toggle");
+  navClose.classList.add("show__toggle");
+});
+
+navClose.addEventListener("click", function () {
+  navMenu.classList.remove("nav__menu__visible");
+  navList.classList.remove("nav__list__expand");
+  navClose.classList.remove("show__toggle");
+  toggle.classList.remove("hide__toggle");
+});
+
 // Select all slides
 const slides = document.querySelectorAll(".slide");
 
@@ -57,6 +78,19 @@ prevSlide.addEventListener("click", () => {
 
 // Initialize the indicators
 updateIndicators();
+
+// auto playing carousel on mobile & tablets
+function checkScreenSize() {
+  if (window.innerWidth < 1024) {
+    setInterval(() => {
+      navigateSlide("next");
+    }, 3000);
+  }
+}
+
+window.addEventListener("resize", checkScreenSize);
+
+checkScreenSize();
 
 const video = document.querySelector(".main-video");
 const playBtn = document.querySelector(".svg-container");
@@ -117,10 +151,12 @@ form.addEventListener("submit", function (e) {
   if (!firstName.value) {
     e.preventDefault();
     firstNameErrorContainer.style.display = "block";
+    firstName.style.border = "1px solid #FF7777";
     firstNameError.textContent =
       "This field can’t be empty. Please fill it in.";
     return;
   } else {
+    firstName.style.border = "1px solid rgba(255, 255, 255, 0.5)";
     firstNameErrorContainer.style.display = "none";
   }
 
@@ -181,3 +217,14 @@ function validateEmail(email) {
   var re = /\S+@\S+\.\S+/;
   return re.test(email);
 }
+
+var videoGradient = document.querySelector(".video-gradient-vector");
+var videoElement = document.querySelector(".main-video");
+var videoWrapper = document.querySelector(".video-wrapper");
+
+var totalHeight =
+  videoGradient.getBBox().height + videoElement.offsetHeight - 124;
+
+console.log("total height ", totalHeight);
+
+videoWrapper.style.height = totalHeight + "px";
