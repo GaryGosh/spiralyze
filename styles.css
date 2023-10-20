@@ -1204,4 +1204,8 @@ select::placeholder {
   .footer-right li:nth-child(3) {
     padding-right: 0;
   }
+
+  .error-wrapper {
+    left: 50px;
+  }
 }
