@@ -889,7 +889,7 @@ select::placeholder {
   .gradient-wrapper {
     background: linear-gradient(180deg, #194d41 0%, rgba(25, 77, 65, 0.7) 100%),
       url(./assets/mainbg.png) no-repeat top right !important;
-    height: 1062px;
+    height: 1069px;
     /* background: url(./assets/mainbg.png) no-repeat right !important; */
     display: flex;
     flex-direction: column;
@@ -911,7 +911,8 @@ select::placeholder {
   }
 
   .white-curve {
-    bottom: -1px;
+    bottom: -2px;
+    z-index: 101;
   }
 
   .white-curve path {
@@ -1243,6 +1244,7 @@ select::placeholder {
 
   .white-curve {
     bottom: -1px;
+    z-index: 101;
   }
 
   .white-curve path {
