@@ -1043,11 +1043,15 @@ select::placeholder {
   }
 
   .slider-wrapper {
-    margin: 140px 16px 0 16px;
+    margin: 80px 16px 0 16px;
   }
 
   .btn {
     display: none;
+  }
+
+  .indicators {
+    bottom: -80px;
   }
 
   .white-space {
