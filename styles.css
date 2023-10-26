@@ -542,6 +542,10 @@ a:visited {
   left: 0;
 }
 
+.play-mobile {
+  display: none;
+}
+
 .svg-wrapper .circle-1 {
   transition: cx 0.5s, cy 0.5s, r 0.5s;
 }
@@ -1161,14 +1165,12 @@ select::placeholder {
     z-index: 1001;
   }
 
-  .main-video {
-    height: 306px;
+  .play-dt {
+    display: none;
   }
-  .svg-container {
-    right: unset;
-    left: 100px;
-    top: 30px;
-    z-index: 1003;
+
+  .play-mobile {
+    display: block;
   }
 
   .video-container {
@@ -1226,7 +1228,7 @@ select::placeholder {
   }
 
   .footer {
-    padding: 34px 32px;
+    padding: 34px 30px;
   }
 
   .footer-items-container {
@@ -1246,6 +1248,119 @@ select::placeholder {
 
   .error-wrapper {
     left: 50px;
+  }
+}
+
+@media only screen and (min-width: 350px) and (max-width: 370px) {
+  .main-video {
+    /* height: 306px; */
+    height: 306px;
+    top: 3px;
+  }
+  .svg-container {
+    /* right: unset;
+    left: 100px;
+    top: 30px;
+    z-index: 1003; */
+    right: unset;
+    left: 117px;
+    top: 35px;
+    z-index: 1003;
+  }
+
+  .watermark {
+    top: 255px;
+  }
+
+  .video-wrapper {
+    height: 890px !important;
+  }
+}
+
+@media only screen and (min-width: 372px) and (max-width: 385px) {
+  .main-video {
+    height: 306px;
+  }
+  .svg-container {
+    right: unset;
+    left: 128px;
+    top: 50px;
+    z-index: 1003;
+  }
+
+  .watermark {
+    top: 285px;
+  }
+
+  .video-wrapper {
+    height: 890px !important;
+  }
+}
+
+@media only screen and (min-width: 387px) and (max-width: 391px) {
+  .main-video {
+    height: 306px;
+  }
+  .svg-container {
+    right: unset;
+    left: 128px;
+    top: 87px;
+    z-index: 1003;
+  }
+
+  .watermark {
+    top: 285px;
+  }
+
+  .video-wrapper {
+    height: 870px !important;
+  }
+}
+
+@media only screen and (min-width: 392px) and (max-width: 410px) {
+  .main-video {
+    height: 306px;
+  }
+  .svg-container {
+    right: unset;
+    left: 139px;
+    top: 101px;
+    z-index: 1003;
+  }
+
+  .watermark {
+    top: 285px;
+  }
+
+  .video-wrapper {
+    height: 850px !important;
+  }
+}
+
+@media only screen and (min-width: 411px) and (max-width: 420px) {
+  .video-title-wrapper {
+    padding: 108px 16px 0 16px;
+  }
+  .main-video {
+    height: 306px;
+  }
+  .svg-container {
+    right: unset;
+    left: 139px;
+    top: 136px;
+    z-index: 1003;
+  }
+
+  .watermark {
+    top: 335px;
+  }
+
+  .video-wrapper {
+    height: 890px !important;
+  }
+
+  .main-video {
+    top: 84px;
   }
 }
 
