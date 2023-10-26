@@ -83,7 +83,7 @@ function checkScreenSize() {
   if (window.innerWidth < 1024) {
     // auto playing carousel on mobile & tablets
     setInterval(() => {
-      // navigateSlide("next");
+      navigateSlide("next");
     }, 3000);
   }
 
